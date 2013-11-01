@@ -3,7 +3,9 @@
 
     <string name="app_name">IplSA</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string><string name="Empty" />
-    
+    <string name="hello_world">Hello world!</string>
+    <string name="Empty" />
+    <string name="title_activity_moodle_lista_cadeiras">MoodleListaCadeirasActivity</string>
+    <string name="placerholderString">Placeholder</string>
 
 </resources>
