@@ -47,6 +47,13 @@ public class MenuFeedActivity extends Activity {
 		startActivity(intent);	
 	}
 	
+	public void listCoursesButtonPressed(View v)
+	{
+		Intent intent = new Intent(this,MoodleListCoursesActivity.class);
+		startActivity(intent);
+	}
+	
+	
 	public boolean fillFeed()
 	{
 				

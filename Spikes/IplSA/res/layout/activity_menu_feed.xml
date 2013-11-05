@@ -26,15 +26,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/configButton" >
-    </ListView>
-
-    <Button
+        android:layout_below="@+id/configButton" />
+    
+      <ImageButton
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/feedListView"
-        android:layout_alignTop="@+id/configButton"
-        android:text="@string/placerholderString" />
+        android:onClick="listCoursesButtonPressed"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/moodle_icon"
+         />
+    	
 
+  
 </RelativeLayout>
