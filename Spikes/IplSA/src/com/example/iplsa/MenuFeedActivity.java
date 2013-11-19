@@ -53,6 +53,12 @@ public class MenuFeedActivity extends Activity {
 		startActivity(intent);
 	}
 	
+	public void tweetOnClick(View v)
+	{
+		Intent intent = new Intent(this,TwitterActivity.class);
+		startActivity(intent);
+	}
+	
 	
 	public boolean fillFeed()
 	{

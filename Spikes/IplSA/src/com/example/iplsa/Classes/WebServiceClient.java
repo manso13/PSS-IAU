@@ -40,9 +40,9 @@ public class WebServiceClient {
 
 	public WebServiceClient(String methodName, String user, String password ) 
 	{
-		//this.namespace = namespace;
-		//this.soapAction = namespace + methodName;
-		//this.url = url;	
+		this.namespace = namespace;
+		this.soapAction = soapAction;
+		this.url = url;	
 		this.user=user;
 		this.password=password;
 	}

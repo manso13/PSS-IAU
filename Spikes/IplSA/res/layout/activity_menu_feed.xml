@@ -36,7 +36,14 @@
         android:contentDescription="@string/app_name"
         android:src="@drawable/moodle_icon"
          />
-    	
 
+      <Button
+          android:id="@+id/button2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignTop="@+id/configButton"
+          android:layout_centerHorizontal="true"
+          android:text="Button" 
+          android:onClick="tweetOnClick"/>
   
 </RelativeLayout>

@@ -7,5 +7,6 @@
     <string name="Empty" />
     <string name="title_activity_moodle_lista_cadeiras">MoodleListaCadeirasActivity</string>
     <string name="placerholderString">Placeholder</string>
+    <string name="title_activity_twitter">TwitterActivity</string>
 
 </resources>
