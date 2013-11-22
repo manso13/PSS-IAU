@@ -1,4 +1,4 @@
-package com.example.iplsa;
+package com.meicm.iplsa;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -18,6 +18,8 @@ import android.preference.RingtonePreference;
 import android.text.TextUtils;
 
 import java.util.List;
+
+import com.example.iplsa.R;
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On

@@ -1,9 +1,10 @@
-package com.example.iplsa;
+package com.meicm.iplsa;
 
 import java.util.ArrayList;
 
-import com.example.iplsa.Classes.HandlerTwitter;
-import com.example.iplsa.Classes.Notice;
+import com.example.iplsa.R;
+import com.meicm.iplsa.Classes.HandlerTwitter;
+import com.meicm.iplsa.Classes.FeedNotification;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -24,7 +25,7 @@ public class TwitterActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_twitter);
 		HandlerTwitter handlerTwitter = new HandlerTwitter();
-		ArrayList<Notice> tweets = new ArrayList<Notice>();
+		ArrayList<FeedNotification> tweets = new ArrayList<FeedNotification>();
 		tweets = handlerTwitter.getLast20TweetsFromSources();
 		ListView listTweets = (ListView) this.findViewById(R.id.listTweets);
 		TweetAdapter tweetAdapter = new TweetAdapter(this, R.layout.list_row_notice, tweets);
@@ -40,11 +41,11 @@ public class TwitterActivity extends Activity {
 		return true;
 	}
 
-	private class TweetAdapter extends ArrayAdapter<Notice> {
+	private class TweetAdapter extends ArrayAdapter<FeedNotification> {
 
-        private ArrayList<Notice> tweets;
+        private ArrayList<FeedNotification> tweets;
 
-        public TweetAdapter(Context context, int textViewResourceId, ArrayList<Notice> tweets) {
+        public TweetAdapter(Context context, int textViewResourceId, ArrayList<FeedNotification> tweets) {
                 super(context, textViewResourceId, tweets);
                 this.tweets = tweets;
         }
@@ -56,7 +57,7 @@ public class TwitterActivity extends Activity {
                     LayoutInflater vi = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                     v = vi.inflate(R.layout.list_row_notice, null);
                 }
-                Notice n = tweets.get(position);
+                FeedNotification n = tweets.get(position);
                 if (n != null) {
                         TextView tt = (TextView) v.findViewById(R.id.toptext);
                         TextView bt = (TextView) v.findViewById(R.id.bottomtext);

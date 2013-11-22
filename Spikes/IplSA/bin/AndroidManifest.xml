@@ -17,7 +17,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.iplsa.MenuFeedActivity"
+            android:name="com.meicm.iplsa.MenuFeedActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,15 +26,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.iplsa.ConfigOptionsActivity"
+            android:name="com.meicm.iplsa.ConfigOptionsActivity"
             android:label="@string/title_activity_config_options" >
         </activity>
         <activity
-            android:name="com.example.iplsa.MoodleListCoursesActivity"
+            android:name="com.meicm.iplsa.MoodleListCoursesActivity"
             android:label="@string/title_activity_moodle_lista_cadeiras" >
         </activity>
         <activity
-            android:name="com.example.iplsa.TwitterActivity"
+            android:name="com.meicm.iplsa.TwitterActivity"
             android:label="@string/title_activity_twitter" >
         </activity>
     </application>

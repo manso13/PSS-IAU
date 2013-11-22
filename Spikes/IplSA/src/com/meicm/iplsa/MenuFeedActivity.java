@@ -1,8 +1,11 @@
-package com.example.iplsa;
+package com.meicm.iplsa;
 
 import java.util.ArrayList;
 
-import com.example.iplsa.Classes.RowItem;
+
+
+import com.example.iplsa.R;
+import com.meicm.iplsa.Classes.RowItem;
 
 import android.os.Bundle;
 import android.app.Activity;

@@ -1,15 +1,15 @@
-package com.example.iplsa.Classes;
+package com.meicm.iplsa.Classes;
 
 import java.sql.Date;
 
-public class Notice {
+public class FeedNotification {
 	
 	private String date;
 	private int type;
 	private String source;
 	private String body;
 	
-	public Notice(String date, int type, String source, String body) {
+	public FeedNotification(String date, int type, String source, String body) {
 		super();
 		this.date = date;
 		this.type = type;

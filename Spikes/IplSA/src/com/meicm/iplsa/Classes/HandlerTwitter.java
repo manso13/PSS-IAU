@@ -1,4 +1,4 @@
-package com.example.iplsa.Classes;
+package com.meicm.iplsa.Classes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ public class HandlerTwitter {
 		
 	}
 
-	public ArrayList<Notice> getLast20TweetsFromSources(){
+	public ArrayList<FeedNotification> getLast20TweetsFromSources(){
 		
 		 if (android.os.Build.VERSION.SDK_INT > 9) {
              StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -38,7 +38,7 @@ public class HandlerTwitter {
                      "az6y2oaHZaYb12TntxbRULJgKBwDHoQJP7yAl73jzqhZG");
      TwitterFactory tf = new TwitterFactory(cb.build());
      Twitter twitter = tf.getInstance();
-     ArrayList<Notice> tweets = new ArrayList<Notice>();
+     ArrayList<FeedNotification> tweets = new ArrayList<FeedNotification>();
      try {
      	
          ResponseList<User> users;
@@ -52,7 +52,7 @@ public class HandlerTwitter {
                  	List<Status> statuses = twitter.getUserTimeline(user.getId());
                  for (Status tweetText : statuses) 
                   {
-                        tweets.add(new Notice(tweetText.getCreatedAt().toString(), 1, tweetText.getUser().getName(), tweetText.getText()));
+                        tweets.add(new FeedNotification(tweetText.getCreatedAt().toString(), 1, tweetText.getUser().getName(), tweetText.getText()));
                         System.out.println("Tipo - 1 From - " + tweetText.getUser().getName() + " Body - " + tweetText.getText() + " Date - " +tweetText.getCreatedAt().toString());
                   }
                  }

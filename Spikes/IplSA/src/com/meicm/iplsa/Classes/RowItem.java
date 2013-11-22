@@ -1,4 +1,4 @@
-package com.example.iplsa.Classes;
+package com.meicm.iplsa.Classes;
 
 public class RowItem {
 

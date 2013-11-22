@@ -1,4 +1,4 @@
-package com.example.iplsa;
+package com.meicm.iplsa;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,10 @@ import java.util.List;
 
 
 
-import com.example.iplsa.Classes.WebServiceClient;
+
+
+import com.example.iplsa.R;
+import com.meicm.iplsa.Classes.WebServiceClient;
 
 import android.app.Activity;
 import android.app.ListActivity;
