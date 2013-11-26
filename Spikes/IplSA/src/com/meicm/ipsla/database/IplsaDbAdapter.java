@@ -25,7 +25,7 @@ import android.util.Log;
  * of using a collection of inner classes (which is less scalable and not
  * recommended).
  */
-public class TicketsDbAdapter {
+public class IplsaDbAdapter {
 
 	public static final String TABLE_NAME = "notifications";
 	public static final String COLUMN_ROWID = "_id";
@@ -87,7 +87,7 @@ public class TicketsDbAdapter {
      * 
      * @param ctx the Context within which to work
      */
-    public TicketsDbAdapter(Context ctx) {
+    public IplsaDbAdapter(Context ctx) {
         this.mCtx = ctx;
     }
 
@@ -100,7 +100,7 @@ public class TicketsDbAdapter {
      *         initialization call)
      * @throws SQLException if the database could be neither opened or created
      */
-    public TicketsDbAdapter open() throws SQLException {
+    public IplsaDbAdapter open() throws SQLException {
         mDbHelper = new DatabaseHelper(mCtx);
         mDb = mDbHelper.getWritableDatabase();
         return this;

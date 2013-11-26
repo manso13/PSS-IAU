@@ -3,8 +3,9 @@ package com.meicm.iplsa;
 import java.util.ArrayList;
 
 import com.example.iplsa.R;
-import com.meicm.iplsa.Classes.HandlerTwitter;
+import com.meicm.iplsa.Classes.HandlerNotifications;
 import com.meicm.iplsa.Classes.FeedNotification;
+import com.meicm.ipsla.database.IplsaDbAdapter;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -24,12 +25,19 @@ public class TwitterActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_twitter);
-		HandlerTwitter handlerTwitter = new HandlerTwitter();
+		HandlerNotifications handlerNotifications = new HandlerNotifications();
 		ArrayList<FeedNotification> tweets = new ArrayList<FeedNotification>();
-		tweets = handlerTwitter.getLast20TweetsFromSources();
+		tweets = handlerNotifications.getLast20NotificationsFromSources();
 		ListView listTweets = (ListView) this.findViewById(R.id.listTweets);
-		TweetAdapter tweetAdapter = new TweetAdapter(this, R.layout.list_row_notice, tweets);
-		listTweets.setAdapter(tweetAdapter);
+		NotificationAdapter notificationAdapter = new NotificationAdapter(this, R.layout.list_row_notice, tweets);
+		listTweets.setAdapter(notificationAdapter);
+		
+		IplsaDbAdapter dbAdapter = new IplsaDbAdapter(this);
+		
+		for (FeedNotification feedNotification : tweets) 
+		{
+			dbAdapter.createNotification(feedNotification);	
+		}	
 		
 		
 	}
@@ -41,11 +49,11 @@ public class TwitterActivity extends Activity {
 		return true;
 	}
 
-	private class TweetAdapter extends ArrayAdapter<FeedNotification> {
+	private class NotificationAdapter extends ArrayAdapter<FeedNotification> {
 
         private ArrayList<FeedNotification> tweets;
 
-        public TweetAdapter(Context context, int textViewResourceId, ArrayList<FeedNotification> tweets) {
+        public NotificationAdapter(Context context, int textViewResourceId, ArrayList<FeedNotification> tweets) {
                 super(context, textViewResourceId, tweets);
                 this.tweets = tweets;
         }
